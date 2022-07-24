@@ -13,7 +13,7 @@ export default {
   },
   refresh_token: (binded_data) => {
     return JWT.sign(binded_data, SECRET_RF_TOKEN, {
-      expiresIn: "40s",
+      expiresIn: "120s",
     });
   },
 };

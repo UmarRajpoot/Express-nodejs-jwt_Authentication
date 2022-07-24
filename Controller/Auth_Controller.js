@@ -44,14 +44,14 @@ export default {
         .catch((error) => {
           next(
             httperrors(403, {
-              message: error && error.errors.map((error) => error.message),
+              message: error || error.errors.map((error) => error.message),
             })
           );
         });
     } catch (error) {
       next(
         httperrors(403, {
-          message: error && error.details.map((error) => error.message),
+          message: error || error.details.map((error) => error.message),
         })
       );
     }
@@ -72,7 +72,7 @@ export default {
         .catch((error) => {
           next(
             httperrors(403, {
-              message: error && error.errors.map((error) => error.message),
+              message: error || error.errors.map((error) => error.message),
             })
           );
         });
@@ -102,7 +102,7 @@ export default {
             .catch((error) => {
               next(
                 httperrors(403, {
-                  message: error && error.errors.map((error) => error.message),
+                  message: error || error.errors.map((error) => error.message),
                 })
               );
             });
@@ -111,7 +111,7 @@ export default {
     } catch (error) {
       next(
         httperrors(403, {
-          message: error && error.details.map((error) => error.message),
+          message: error || error.details.map((error) => error.message),
         })
       );
     }
@@ -126,7 +126,7 @@ export default {
     } catch (error) {
       next(
         httperrors(403, {
-          message: error && error.details.map((error) => error.message),
+          message: error || error.details.map((error) => error.message),
         })
       );
     }

@@ -2,6 +2,7 @@ import { Router } from "express";
 import Auth_Controller from "../Controller/Auth_Controller";
 
 import check_token from "../Middleware/check_token";
+import generate_refresh from "../Middleware/generate_refresh";
 
 const router = Router();
 
