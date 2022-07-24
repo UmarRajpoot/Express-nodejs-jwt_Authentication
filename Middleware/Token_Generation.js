@@ -1,5 +1,6 @@
 import JWT from "jsonwebtoken";
 
+// Or You may Put in .env file that is (Recommanded).
 let SECRET_TOKEN =
   "";
 let SECRET_RF_TOKEN =
