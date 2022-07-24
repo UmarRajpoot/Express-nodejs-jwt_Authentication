@@ -6,11 +6,13 @@ import Auth from "../Models/Auth";
 import Token_Generation from "./Token_Generation";
 
 const check_token = (req, res, next) => {
+  
+  // Or You may Put in .env file that is (Recommanded).
   let SECRET_TOKEN =
-    "7ec8fbf5-f6f8-4761-9b51-f204d02f415742283640-869c-46f4-996e-915cb08ce067";
+    "";
 
   let SECRET_RF_TOKEN =
-    "584cf2c2-7aec-4fe0-9b37-f7dd4f2b669081063f75-812f-4065-8be4-33c412e7c9c0";
+    "";
 
   let token = req.headers["x-access-token"];
 
